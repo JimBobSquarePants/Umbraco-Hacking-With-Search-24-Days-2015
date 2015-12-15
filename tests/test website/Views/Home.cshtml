@@ -1,0 +1,56 @@
+﻿@using SearchDemo.Helpers
+@using SearchDemo.Models
+@inherits UmbracoViewPage<RenderHome>
+
+<section>
+
+    <h1>@Model.Content.Name</h1>
+
+    <img src="@Model.Content.Image.GetCropUrl("test")" />
+
+    @Model.Content.BodyText
+</section>
+
+<hr />
+
+<section>
+    <h1>Search Data</h1>
+    <p>
+        Searching for the term <var>sit amet</var>.
+    </p>
+    @{
+        Dictionary<string, IGrouping<string, SearchMatch>> result =
+            SearchEngine.SearchSite("sit amet")
+            .GroupBy(r => r.Categories[0])
+            .ToDictionary(x => x.Key, x => x);
+
+    }
+
+    @if (result.Any())
+    {
+        foreach (KeyValuePair<string, IGrouping<string, SearchMatch>> group in result)
+        {
+            <h4>@group.Key</h4>
+            <ul>
+                @foreach (SearchMatch match in group.Value)
+                {
+                    <li>
+                        <a href="@match.Url">@match.HighlightText;</a>
+                    </li>
+                }
+            </ul>
+        }
+    }
+</section>
+<hr />
+<section>
+    <h1>Children</h1>
+    <ul>
+        @foreach (SubPage child in Model.SubPages)
+        {
+            <li>
+                <a href="@child.Url">@child.Name;</a>
+            </li>
+        }
+    </ul>
+</section>

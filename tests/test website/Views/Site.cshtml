@@ -1,0 +1,13 @@
+﻿@inherits UmbracoViewPage<SearchDemo.Models.RenderPageBase>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="@Model.CurrentCulture.TwoLetterISOLanguageName" prefix="og: http://ogp.me/ns#">
+<head>
+    <title>@Model.Content.Name</title>
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>

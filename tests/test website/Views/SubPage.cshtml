@@ -1,0 +1,8 @@
+﻿@using SearchDemo.Models
+@inherits UmbracoViewPage<RenderSubPage>
+
+<h1>@Model.Content.Name</h1>
+
+<img src="@Model.Content.Image.GetCropUrl("test")" />
+
+@Model.Content.BodyText
