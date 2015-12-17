@@ -4,9 +4,9 @@
     using System.Globalization;
     using System.Linq;
 
-    using global::Umbraco.Core;
-    using global::Umbraco.Core.Models;
-    using global::Umbraco.Core.Persistence;
+    using Umbraco.Core;
+    using Umbraco.Core.Models;
+    using Umbraco.Core.Persistence;
 
     /// <summary>
     /// The localization helper.

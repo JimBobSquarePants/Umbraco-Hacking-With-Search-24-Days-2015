@@ -11,13 +11,13 @@
 
     using Our.Umbraco.Ditto;
 
-    using global::Umbraco.Core;
-    using global::Umbraco.Core.Configuration;
-    using global::Umbraco.Core.Configuration.UmbracoSettings;
-    using global::Umbraco.Core.Models;
-    using global::Umbraco.Web;
-    using global::Umbraco.Web.Routing;
-    using global::Umbraco.Web.Security;
+    using Umbraco.Core;
+    using Umbraco.Core.Configuration;
+    using Umbraco.Core.Configuration.UmbracoSettings;
+    using Umbraco.Core.Models;
+    using Umbraco.Web;
+    using Umbraco.Web.Routing;
+    using Umbraco.Web.Security;
 
     using Newtonsoft.Json;
 

@@ -4,10 +4,10 @@
 
     using Newtonsoft.Json;
 
-    using global::Umbraco.Core;
-    using global::Umbraco.Core.Models.PublishedContent;
-    using global::Umbraco.Core.PropertyEditors;
-    using global::Umbraco.Web.Models;
+    using Umbraco.Core;
+    using Umbraco.Core.Models.PublishedContent;
+    using Umbraco.Core.PropertyEditors;
+    using Umbraco.Web.Models;
 
     /// <summary>
     /// The image cropper property converter. This allows Ditto to map the image cropper using the built in Umbraco

@@ -3,9 +3,10 @@
     using System;
     using System.Web;
 
-    using global::Umbraco.Core.Models;
-    using global::Umbraco.Web;
-    using global::Umbraco.Web.Models;
+    using Umbraco.Core.Models;
+    using Umbraco.Web;
+    using Umbraco.Web.Models;
+
     using Extensions;
 
     /// <summary>

@@ -19,6 +19,8 @@
         /// Gets or sets the body text.
         /// </summary>
         [SearchMergedField]
+        [VortoProperty]
+        [VortoSearchResolver]
         public virtual HtmlString BodyText { get; set; }
     }
 }

@@ -14,8 +14,8 @@
     using Examine.SearchCriteria;
     using Examine.LuceneEngine.SearchCriteria;
 
-    using global::Umbraco.Core;
-    using global::Umbraco.Core.Models;
+    using Umbraco.Core;
+    using Umbraco.Core.Models;
 
     using Lucene.Net.Analysis;
     using Lucene.Net.Analysis.Standard;

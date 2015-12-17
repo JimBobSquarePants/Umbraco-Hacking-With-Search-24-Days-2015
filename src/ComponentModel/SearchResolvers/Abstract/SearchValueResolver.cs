@@ -3,7 +3,7 @@ namespace SearchDemo.ComponentModel
     using System.Globalization;
     using System.Reflection;
 
-    using global::Umbraco.Core.Models;
+    using Umbraco.Core.Models;
 
     /// <summary>
     /// Provides methods to convert values to values suitable for indexing with Examine.

@@ -6,8 +6,30 @@
 <html lang="@Model.CurrentCulture.TwoLetterISOLanguageName" prefix="og: http://ogp.me/ns#">
 <head>
     <title>@Model.Content.Name</title>
+    <style>
+        img {
+            max-width: 100%;
+        }
+
+        html {
+            font-family: arial;
+        }
+
+        main {
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+
+        a {
+            color: #0000EE;
+        }
+
+        strong, var {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    @RenderBody()
+    <main>@RenderBody()</main>
 </body>
 </html>

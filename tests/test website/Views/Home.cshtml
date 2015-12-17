@@ -1,4 +1,5 @@
-﻿@using SearchDemo.Helpers
+﻿@using System.Globalization
+@using SearchDemo.Helpers
 @using SearchDemo.Models
 @inherits UmbracoViewPage<RenderHome>
 
@@ -16,11 +17,11 @@
 <section>
     <h1>Search Data</h1>
     <p>
-        Searching for the term <var>sit amet</var>.
+        Searching for the term <var>sit amet</var> using en-US culture.
     </p>
     @{
         Dictionary<string, IGrouping<string, SearchMatch>> result =
-            SearchEngine.SearchSite("sit amet")
+            SearchEngine.SearchSite("sit amet", null, new[] { CultureInfo.CreateSpecificCulture("en-US") })
             .GroupBy(r => r.Categories[0])
             .ToDictionary(x => x.Key, x => x);
 
